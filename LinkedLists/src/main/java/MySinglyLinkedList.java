@@ -20,6 +20,7 @@ public class MySinglyLinkedList {
             size++;
         }
     }
+
     void deleteById(int id ) {
 
         //check if empty
@@ -47,6 +48,7 @@ public class MySinglyLinkedList {
 
         }
     }
+
     int indexOf(int id){
 
         if(isEmpty())return -1;
@@ -59,6 +61,7 @@ public class MySinglyLinkedList {
         }
          return -1;
     }
+
     void printNodes() {
         Node current = head;
         while (current != null) {
@@ -69,4 +72,41 @@ public class MySinglyLinkedList {
             current = current.next;
         }
     }
+
+
+      int getKthFromLast(int k){
+
+        Node fast = head;
+        Node slow = head;
+
+          for (int i = 0; i <k ; i++) {
+              if(fast==null) return -1;
+              fast = fast.next;
+          }
+
+         while(fast != null){
+             fast = fast.next;
+             slow = slow.next;
+         }
+         return slow.id;
+    }
+
+    void removeKthFromLast(int k){
+        Node fast = head;
+        Node slow = head;
+
+        for (int i = 0; i <k ; i++) {
+            if(fast==null) System.out.println("List is empty!!!");;
+            fast = fast.next;
+        }
+
+        while(fast != null){
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+         slow.next = slow.next.next;
+
+    }
+
 }
