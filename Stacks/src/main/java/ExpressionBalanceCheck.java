@@ -1,3 +1,5 @@
+import java.util.Stack;
+
 public class ExpressionBalanceCheck {
 
     public static void main(String[] args) {
@@ -39,4 +41,5 @@ public class ExpressionBalanceCheck {
 
       return myStack.isEmpty();
     }
+
 }
