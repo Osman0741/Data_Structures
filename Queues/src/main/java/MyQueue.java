@@ -38,7 +38,7 @@ public class MyQueue <T>{
         QNode<T> current = front;
         while (current != null){
             System.out.print(current.value);
-            if (current.next != null) System.out.println(", ");
+            if (current.next != null) System.out.print(", ");
             current = current.next;
         }
     }
