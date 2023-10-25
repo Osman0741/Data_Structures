@@ -88,6 +88,26 @@ public class MyTree {
         printLeaves(root.rightChild);
         if(isLeaf(root)) System.out.print(root.value+"=>");
     }
+    int height(TNode root){
+        if(root==null) return -1;
+        if (isLeaf(root)) return 0;
+        return 1 + Math.max(height(root.leftChild), height(root.rightChild));
+    }
+    int countLeaves( TNode root){
+        if(root==null) return 0;
+        if (isLeaf(root)) return 1;
+        return countLeaves(root.leftChild) + countLeaves(root.rightChild);
+    }
+    int findSumOfLeaves(TNode root){
+        if(root==null) return 0;
+        if(isLeaf(root)) return root.value;
+        return findSumOfLeaves(root.leftChild) + findSumOfLeaves(root.rightChild);
+    }
+    public int calculateNodeSums(TNode root){
+        if(root==null) return 0;
+        return root.value + calculateNodeSums(root.leftChild) +calculateNodeSums(root.rightChild);
+    }
+
 
 
 }

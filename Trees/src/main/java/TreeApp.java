@@ -13,6 +13,8 @@ public class TreeApp {
         tree.levelOrderTraversal();
         System.out.println();
         tree.printLeaves(tree.root);
+        System.out.println();
+        System.out.println(tree.height(tree.root));
 
     }
 }
