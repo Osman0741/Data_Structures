@@ -6,7 +6,8 @@ public class SortingTest {
         // System.out.println(Arrays.toString(SelectionSort.selectionSort(numbers)));
         // System.out.println(Arrays.toString(BubbleSort.bubbleSort(numbers)));
         // System.out.println(Arrays.toString(InsertionSort.insertionSort(numbers)));
-        MergeSort.mergeSort(numbers);
+       // MergeSort.mergeSort(numbers);
+        QuickSort.quickSort(numbers, 0, numbers.length-1);
         System.out.println(Arrays.toString(numbers));
     }
 }
